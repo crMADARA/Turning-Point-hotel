@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hotel Turning Point, Tilda Neora</title><meta name="description" content="Clean, comfortable rooms with online booking at Hotel Turning Point in Tilda Neora.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{pine:'#0E3B43',pine2:'#164C56',brass:'#B8893B',mist:'#F4F6F7',ink:'#1B2830'},fontFamily:{serif:['Fraunces','Georgia','serif'],sans:['Manrope','system-ui','sans-serif']}}}};
+</script><style>:root{--g:linear-gradient(135deg,#164C56,#0E3B43 60%,#0a2b31)}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;color:#1B2830;line-height:1.7;background:#fff}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2;color:#0E3B43}
+.img{background-size:cover;background-position:center;background-color:#164C56}
+.btn{display:inline-block;padding:.8rem 1.6rem;border-radius:.4rem;font-weight:600;transition:background .2s}
+.btn-gold{background:#B8893B;color:#fff}.btn-gold:hover{background:#9f7430}
+.btn-line{border:1.5px solid #fff;color:#fff}.btn-line:hover{background:rgba(255,255,255,.12)}
+.field{width:100%;border:1px solid #cfd8dc;border-radius:.4rem;padding:.7rem .9rem;background:#fff}
+.field:focus,a:focus-visible,button:focus-visible{outline:2px solid #B8893B;outline-offset:2px}
+label{font-size:.85rem;font-weight:600;color:#1B2830;display:block;margin-bottom:.25rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:1.25rem;width:max-content;animation:flow 70s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes flow{to{transform:translateX(-50%)}}
+.rev{width:320px;flex:none;background:#fff;border:1px solid #e3e9ec;border-radius:.6rem;padding:1.25rem}
+.hero-in{animation:rise .9s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.track,.hero-in{animation:none}.marquee{overflow-x:auto}}
+
+.burger{width:46px;height:46px;border-radius:50%;background:#B8893B;position:relative;box-shadow:0 0 0 0 rgba(184,137,59,.6);animation:pulse 2.4s ease-out 3;transition:background .3s,transform .2s}
+.burger:active{transform:scale(.92)}.burger.open{background:#9f7430;animation:none}
+.burger i{position:absolute;left:12px;height:2.5px;border-radius:2px;background:#fff;transition:transform .4s cubic-bezier(.7,0,.3,1),opacity .2s,width .3s,top .3s}
+.burger i:nth-child(1){top:15px;width:22px}.burger i:nth-child(2){top:22px;width:15px}.burger i:nth-child(3){top:29px;width:22px}
+.burger:hover i:nth-child(2){width:22px}
+.burger.open i:nth-child(1){top:22px;transform:rotate(45deg)}.burger.open i:nth-child(2){opacity:0;transform:translateX(12px)}.burger.open i:nth-child(3){top:22px;transform:rotate(-45deg)}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(184,137,59,0)}100%{box-shadow:0 0 0 0 rgba(184,137,59,0)}}
+#ov{position:fixed;left:0;right:0;top:4rem;bottom:0;background:rgba(8,24,28,.6);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .4s;z-index:30}
+#ov.open{opacity:1;pointer-events:auto}
+#dr{position:fixed;top:4rem;right:0;bottom:0;width:82%;max-width:22rem;z-index:40;transform:translateX(105%);transition:transform .55s cubic-bezier(.22,1,.36,1);box-shadow:-12px 0 32px rgba(0,0,0,.35);border-left:3px solid #B8893B;overflow-y:auto}
+#dr.open{transform:none}
+#dr .navl,#dr .dbtn{opacity:0;transform:translateX(36px);transition:opacity .4s,transform .45s cubic-bezier(.22,1,.36,1),background .2s}
+#dr.open .navl,#dr.open .dbtn{opacity:1;transform:none;transition-delay:calc(var(--i)*70ms + 180ms),calc(var(--i)*70ms + 180ms),0s}
+#dr .navl{font-weight:700;font-size:1.1rem;padding:.9rem 1.1rem;border-radius:.6rem;color:#fff;border-left:4px solid transparent}
+#dr .navl:hover{background:rgba(255,255,255,.08)}
+#dr .navl.on{background:rgba(184,137,59,.22);border-left-color:#B8893B;color:#E9C47A}
+header nav .navl{padding:.35rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+header nav .navl:hover{color:#E9C47A}header nav .navl.on{color:#E9C47A;border-color:#B8893B}
+@media(prefers-reduced-motion:reduce){#dr,#ov,.burger,.burger i,#dr .navl{transition:none;animation:none}}
+</style></head>
+<body><div id="hdr"></div>
+<main data-view="home" class="hidden">
+<section class="img text-white" style="background-image:linear-gradient(rgba(14,59,67,.7),rgba(14,59,67,.78)),url(images/hero.jpg),var(--g)"><div class="max-w-6xl mx-auto px-5 py-24 md:py-36 hero-in">
+<h1 class="text-4xl md:text-6xl font-bold text-white max-w-3xl">A clean, comfortable stay in the heart of Tilda</h1>
+<p class="mt-5 text-lg text-white/85 max-w-xl">Well-kept rooms, friendly service and easy online booking at Hotel Turning Point.</p>
+<div class="mt-8 flex flex-wrap gap-3"><a href="#book" class="btn btn-gold">Book Your Room</a><a href="#rooms" class="btn btn-line">View Rooms</a></div></div></section>
+<section class="max-w-6xl mx-auto px-5 -mt-10 relative z-10"><form id="homeForm" class="bg-white rounded-lg shadow-xl p-5 grid gap-4 md:grid-cols-4 items-end">
+<div><label for="a">Check-in</label><input id="a" name="checkin" type="date" required class="field"></div>
+<div><label for="b">Check-out</label><input id="b" name="checkout" type="date" required class="field"></div>
+<div><label for="c">Guests</label><select id="c" name="guests" class="field"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+<button class="btn btn-gold">Check Availability</button></form></section>
+<section class="max-w-6xl mx-auto px-5 py-20 grid gap-10 md:grid-cols-2 items-center">
+<div><h2 class="text-3xl md:text-4xl font-semibold">Welcome to Turning Point</h2>
+<p class="mt-4 text-slate-600">Located in Tilda Neora, Turning Point is a hotel built around three simple promises: spotless rooms, honest prices and warm, attentive service. Whether you are here for business, a family function or a night on the road, you will find a comfortable place to rest.</p>
+<a href="#facilities" class="btn btn-gold mt-6">Explore Facilities</a></div>
+<div class="grid grid-cols-2 gap-4"><div class="img h-48 rounded-lg" style="background-image:url(images/lobby.jpg),var(--g)"></div><div class="img h-48 rounded-lg mt-8" style="background-image:url(images/room-deluxe.jpg),var(--g)"></div></div></section>
+<section class="bg-mist py-20"><div class="max-w-6xl mx-auto px-5"><h2 class="text-3xl md:text-4xl font-semibold text-center">Our Rooms</h2><p class="text-center text-slate-600 mt-2">Choose the room that fits your stay.</p>
+<div class="roomList" data-limit="3" class="grid gap-6 md:grid-cols-3 mt-10"></div></div></section>
+<section class="max-w-6xl mx-auto px-5 py-20 grid gap-8 md:grid-cols-3 text-center">
+<div><h3 class="text-xl font-semibold">Hygiene First</h3><p class="mt-2 text-slate-600 text-sm">Rooms are cleaned and sanitised before every check-in.</p></div>
+<div><h3 class="text-xl font-semibold">Easy Booking</h3><p class="mt-2 text-slate-600 text-sm">Pick your dates online and confirm in minutes.</p></div>
+<div><h3 class="text-xl font-semibold">Friendly Service</h3><p class="mt-2 text-slate-600 text-sm">Our front desk is ready to help around the clock.</p></div></section>
+<section class="bg-mist py-20"><div class="max-w-6xl mx-auto px-5 text-center"><h2 class="text-3xl md:text-4xl font-semibold">What Our Guests Say</h2><p class="text-slate-600 mt-2">People like staying at Turning Point.</p></div>
+<div id="reviews" class="marquee mt-10"></div></section>
+<section class="bg-pine text-center text-white py-16 px-5"><h2 class="text-3xl font-semibold text-white">Ready for a comfortable stay?</h2><p class="mt-2 text-white/80">Reserve your room in under two minutes.</p><a href="#book" class="btn btn-gold mt-6">Book Now</a></section>
+</main>
+<main data-view="rooms" class="hidden">
+<section class="img text-white" style="background-image:linear-gradient(rgba(14,59,67,.72),rgba(14,59,67,.72)),url(images/rooms-hero.jpg),var(--g)"><div class="max-w-6xl mx-auto px-5 py-20 md:py-28 hero-in"><h1 class="text-4xl md:text-5xl font-bold text-white max-w-2xl">Rooms & Interiors</h1><p class="mt-4 text-lg text-white/85 max-w-xl">Thoughtfully arranged rooms that are comfortable, quiet and always fresh.</p></div></section>
+<section class="max-w-6xl mx-auto px-5 py-20"><h2 class="text-3xl font-semibold">Choose Your Room</h2><div class="roomList" class="grid gap-6 md:grid-cols-3 mt-8"></div></section>
+<section class="bg-mist py-20"><div class="max-w-6xl mx-auto px-5"><h2 class="text-3xl font-semibold">Interior Gallery</h2><p class="text-slate-600 mt-2">A look at our rooms, lobby and details.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+<div class="img h-44 rounded-lg" style="background-image:url(images/g1.jpg),var(--g)"></div><div class="img h-44 rounded-lg" style="background-image:url(images/g2.jpg),var(--g)"></div>
+<div class="img h-44 rounded-lg" style="background-image:url(images/g3.jpg),var(--g)"></div><div class="img h-44 rounded-lg" style="background-image:url(images/g4.jpg),var(--g)"></div>
+<div class="img h-44 rounded-lg" style="background-image:url(images/g5.jpg),var(--g)"></div><div class="img h-44 rounded-lg" style="background-image:url(images/g6.jpg),var(--g)"></div>
+<div class="img h-44 rounded-lg" style="background-image:url(images/g7.jpg),var(--g)"></div><div class="img h-44 rounded-lg" style="background-image:url(images/g8.jpg),var(--g)"></div></div></div></section>
+<section class="max-w-6xl mx-auto px-5 py-16 text-sm text-slate-600 grid gap-4 md:grid-cols-3"><p><b class="text-ink">Check-in:</b> 12:00 PM</p><p><b class="text-ink">Check-out:</b> 11:00 AM</p><p><b class="text-ink">ID:</b> A valid photo ID is required for every guest.</p></section>
+</main>
+<main data-view="facilities" class="hidden">
+<section class="img text-white" style="background-image:linear-gradient(rgba(14,59,67,.72),rgba(14,59,67,.72)),url(images/facilities-hero.jpg),var(--g)"><div class="max-w-6xl mx-auto px-5 py-20 md:py-28 hero-in"><h1 class="text-4xl md:text-5xl font-bold text-white max-w-2xl">Facilities & Cleanliness</h1><p class="mt-4 text-lg text-white/85 max-w-xl">Everything you need for a smooth stay, kept spotless every day.</p></div></section>
+<section class="max-w-6xl mx-auto px-5 py-20"><h2 class="text-3xl font-semibold">Hotel Facilities</h2>
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 mt-8">
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Free Wi-Fi</h3><p class="text-sm mt-2 text-slate-600">Fast internet in rooms and common areas.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">24/7 Front Desk</h3><p class="text-sm mt-2 text-slate-600">Help with check-in, travel and local advice.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Power Backup</h3><p class="text-sm mt-2 text-slate-600">Uninterrupted power for lights, AC and Wi-Fi.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Secure Parking</h3><p class="text-sm mt-2 text-slate-600">Safe parking for cars and two-wheelers.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Dining and Room Service</h3><p class="text-sm mt-2 text-slate-600">Fresh vegetarian and non-vegetarian meals.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Air-Conditioned Rooms</h3><p class="text-sm mt-2 text-slate-600">Quiet, efficient cooling and heating.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">CCTV Security</h3><p class="text-sm mt-2 text-slate-600">Monitored entrances and common areas.</p></div>
+<div class="border border-slate-200 rounded-lg p-6"><h3 class="text-lg font-semibold">Travel Desk</h3><p class="text-sm mt-2 text-slate-600">Taxi, railway and local sightseeing support.</p></div></div></section>
+<section class="bg-mist py-20"><div class="max-w-6xl mx-auto px-5 grid gap-10 md:grid-cols-2 items-center">
+<div class="img h-80 rounded-lg" style="background-image:url(images/clean.jpg),var(--g)" role="img" aria-label="Freshly made hotel bed"></div>
+<div><h2 class="text-3xl font-semibold">Our Cleanliness Promise</h2><p class="mt-3 text-slate-600">Cleanliness is the first thing guests notice, so it is the first thing we check.</p>
+<ul class="mt-5 space-y-3 text-slate-700"><li>&#10003; Fresh, laundered bed linen and towels for every guest</li><li>&#10003; Bathrooms scrubbed and sanitised daily</li><li>&#10003; High-touch surfaces disinfected between stays</li><li>&#10003; Daily housekeeping and regular pest control</li><li>&#10003; Purified drinking water in every room</li></ul></div></div></section>
+<section class="bg-pine text-center text-white py-16 px-5"><h2 class="text-3xl font-semibold text-white">See it for yourself</h2><a href="#book" class="btn btn-gold mt-6">Book Your Stay</a></section>
+</main>
+<main data-view="contact" class="hidden">
+<section class="img text-white" style="background-image:linear-gradient(rgba(14,59,67,.72),rgba(14,59,67,.72)),url(images/contact-hero.jpg),var(--g)"><div class="max-w-6xl mx-auto px-5 py-20 md:py-28 hero-in"><h1 class="text-4xl md:text-5xl font-bold text-white max-w-2xl">Book & Contact</h1><p class="mt-4 text-lg text-white/85 max-w-xl">Reserve your room online or get in touch with our team.</p></div></section>
+<section id="book" class="max-w-6xl mx-auto px-5 py-20 grid gap-10 lg:grid-cols-5">
+<div class="lg:col-span-3"><h2 class="text-3xl font-semibold">Book a Room</h2><p class="text-slate-600 mt-2">Fill in your details and we will confirm your booking.</p>
+<form id="bookForm" class="mt-6 grid gap-4 sm:grid-cols-2">
+<div><label for="name">Full name</label><input id="name" name="name" required class="field" autocomplete="name"></div>
+<div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" required pattern="[0-9+ ]{10,15}" class="field" autocomplete="tel"></div>
+<div><label for="checkin">Check-in</label><input id="checkin" name="checkin" type="date" required class="field"></div>
+<div><label for="checkout">Check-out</label><input id="checkout" name="checkout" type="date" required class="field"></div>
+<div><label for="room">Room type</label><select id="room" name="room" class="field"></select></div>
+<div><label for="guests">Guests</label><select id="guests" name="guests" class="field"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+<div class="sm:col-span-2"><label for="notes">Special requests</label><textarea id="notes" name="notes" rows="3" class="field"></textarea></div>
+<p id="sum" class="sm:col-span-2 text-sm font-semibold text-pine"></p>
+<button class="btn btn-gold sm:col-span-2">Request Booking</button></form>
+<div id="ok" class="hidden mt-6 bg-mist border border-slate-200 rounded-lg p-6"></div></div>
+<aside class="lg:col-span-2 bg-mist rounded-lg p-7 text-sm self-start"><h3 class="text-xl font-semibold">Hotel Details</h3>
+<p class="mt-4"><b>Address</b><br>Hotel Turning Point, Sai Mandir, Kharora Road, Tilda Neora, Chhattisgarh 493114</p>
+<p class="mt-3"><b>Phone</b><br>+91 92036 62977</p><p class="mt-3"><b>Email</b><br>info@turningpoint.example</p>
+<p class="mt-3"><b>Check-in / Check-out</b><br>12:00 PM / 11:00 AM</p></aside></section>
+<section class="bg-mist py-20"><div class="max-w-6xl mx-auto px-5"><h2 class="text-3xl font-semibold">Find Us</h2>
+<div class="mt-6 rounded-lg overflow-hidden border border-slate-200"><iframe title="Hotel Turning Point location map" class="w-full h-96" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?cid=14847137510987501631&hl=en&z=17&output=embed"></iframe></div>
+<a class="btn btn-gold mt-5" target="_blank" rel="noopener" href="https://www.google.com/maps?cid=14847137510987501631">Get Directions</a> <a class="btn mt-5 border border-pine text-pine" target="_blank" rel="noopener" href="https://maps.app.goo.gl/Qr886jmDy3fhgTMZ6">Open in Google Maps</a></div></section>
+<section class="max-w-3xl mx-auto px-5 py-20"><h2 class="text-3xl font-semibold">Send Us a Message</h2>
+<form id="contactForm" class="mt-6 grid gap-4"><div class="grid gap-4 sm:grid-cols-2"><div><label for="cn">Your name</label><input id="cn" name="name" required class="field"></div><div><label for="ce">Email</label><input id="ce" name="email" type="email" required class="field"></div></div>
+<div><label for="cm">Message</label><textarea id="cm" name="message" rows="4" required class="field"></textarea></div><button class="btn btn-gold justify-self-start">Send Message</button></form></section>
+</main>
+<div id="ftr"></div><script>const HOTEL={name:'Turning Point',phone:'+91 92036 62977',wa:'919203662977',email:'info@turningpoint.example',
+address:'Sai Mandir, Kharora Road, Tilda Neora, Chhattisgarh 493114',checkIn:'12:00 PM',checkOut:'11:00 AM'};
+// EDIT: rooms and prices (INR per night)
+const ROOMS=[
+{id:'standard',name:'Standard Room',price:1499,img:'room-standard.jpg',guests:2,desc:'A calm, well-lit room with a comfortable double bed, ideal for solo travellers and couples.',feat:['Air conditioning','Free Wi-Fi','Smart TV','Attached bathroom']},
+{id:'deluxe',name:'Deluxe Room',price:1999,img:'room-deluxe.jpg',guests:3,desc:'More space, a work desk and a sitting corner for business trips and longer stays.',feat:['King bed','Work desk','Hot water 24/7','Tea and coffee kit']},
+{id:'family',name:'Family Suite',price:2799,img:'room-family.jpg',guests:4,desc:'Two beds and a separate seating area, designed for families travelling together.',feat:['Two double beds','Sitting area','Extra storage','Free parking']}];
+// EDIT: replace these sample reviews with real guest reviews before launch
+const REVIEWS=[
+['Rohit S.','Spotless rooms and very polite staff. Easily the best stay in Tilda.'],
+['Anita V.','Bed linen was fresh and the bathroom was spotless. We felt at home right away.'],
+['Imran K.','Quick check-in, strong Wi-Fi and a quiet room. Perfect for my business trip.'],
+['Neha P.','Great value for money. The family suite had plenty of space for all of us.'],
+['Deepak M.','Staff helped us with local travel plans and arranged an early breakfast.'],
+['Sunita R.','Very peaceful location and the AC worked perfectly. Will stay again.'],
+['Karan T.','Clean, safe and easy to reach from the highway. Recommended.'],
+['Pooja D.','Loved the neat interiors and comfortable mattress. Slept really well.'],
+['Vikram J.','Booking online was simple and the room matched the photos.'],
+['Meena G.','Friendly team, hot water all day and a tidy dining area.'],
+['Arjun B.','Parking was easy and the front desk was available at night.'],
+['Farah N.','Everything felt fresh and well maintained. Great hospitality.']];
+const NAV=[['#home','Home','home'],['#rooms','Rooms','rooms'],['#facilities','Facilities & Cleanliness','facilities'],['#contact','Book & Contact','contact']];
+const LOGO=(z=40)=>`<svg width="${z}" height="${z}" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#164C56" stroke="#B8893B" stroke-width="2"/><path d="M12 13.5h16M20 13.5V27" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M12.5 29.5a10 10 0 0 0 15 0" stroke="#B8893B" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+document.getElementById('hdr').innerHTML=`<header class="sticky top-0 z-50 bg-pine text-white shadow-lg"><div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+<a href="#home" class="flex items-center gap-3">${LOGO(42)}<span class="leading-tight"><span class="block font-serif text-xl font-bold">Turning Point</span><span class="block text-[11px] text-brass font-semibold">Hotel &amp; Stay, Tilda Neora</span></span></a>
+<nav class="hidden md:flex items-center gap-8 text-sm font-bold">${NAV.map(n=>`<a href="${n[0]}" data-p="${n[2]}" class="navl">${n[1]}</a>`).join('')}<a href="#book" class="btn btn-gold !py-2">Book Now</a></nav>
+<button id="mb" class="burger md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="dr"><i></i><i></i><i></i></button></div></header>
+<div id="ov" class="md:hidden"></div>
+<aside id="dr" class="md:hidden bg-pine text-white flex flex-col p-6" aria-hidden="true"><div class="flex items-center gap-3 pb-5 mb-4 border-b border-white/15">${LOGO(48)}<div><div class="font-serif text-xl font-bold">Turning Point</div><div class="text-xs text-brass font-semibold">Welcome, let us help you book</div></div></div>
+<nav class="flex flex-col gap-2">${NAV.map((n,i)=>`<a href="${n[0]}" data-p="${n[2]}" style="--i:${i}" class="navl">${n[1]}</a>`).join('')}</nav>
+<div class="mt-auto pt-6"><a href="#book" style="--i:4" class="btn btn-gold w-full text-center font-bold dbtn">Book Your Room</a><p class="text-xs text-white/70 text-center mt-4">${HOTEL.phone}<br>${HOTEL.address}</p></div></aside>`;
+const mb=document.getElementById('mb'),dr=document.getElementById('dr'),ov=document.getElementById('ov');
+function setMenu(o){[mb,dr,ov].forEach(e=>e.classList.toggle('open',o));mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');dr.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''}
+function closeMenu(){setMenu(false)}
+mb.onclick=()=>setMenu(!dr.classList.contains('open'));ov.onclick=closeMenu;
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});addEventListener('resize',()=>{if(innerWidth>=768)closeMenu()});
+document.getElementById('ftr').innerHTML=`<footer class="bg-pine text-white/80 mt-0"><div class="max-w-6xl mx-auto px-5 py-12 grid gap-8 md:grid-cols-3 text-sm">
+<div><div class="flex items-center gap-3 mb-3">${LOGO(44)}<span class="font-serif text-2xl text-white font-bold">Turning Point</span></div><p>A clean, comfortable and welcoming hotel in Tilda Neora.</p></div>
+<div><div class="font-semibold text-white mb-2">Explore</div>${NAV.map(n=>`<a class="block hover:text-brass" href="${n[0]}">${n[1]}</a>`).join('')}</div>
+<div><div class="font-semibold text-white mb-2">Contact</div><p>${HOTEL.address}</p><p>${HOTEL.phone}</p><p>${HOTEL.email}</p></div></div>
+<div class="border-t border-white/15 text-center text-xs py-4">&copy; ${new Date().getFullYear()} Hotel Turning Point. All rights reserved.</div></footer>`;
+const stars='<span class="text-brass" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>';
+const rv=document.getElementById('reviews');
+if(rv){const c=REVIEWS.map(r=>`<figure class="rev">${stars}<blockquote class="my-2 text-[.95rem]">${r[1]}</blockquote><figcaption class="flex items-center gap-3 text-sm"><span class="w-9 h-9 rounded-full bg-pine text-white grid place-items-center font-semibold">${r[0][0]}</span><span class="font-semibold">${r[0]}</span></figcaption></figure>`).join('');
+rv.innerHTML=`<div class="track">${c}${c}</div>`}
+document.querySelectorAll('.roomList').forEach(rl=>{const lim=+rl.dataset.limit||99;rl.innerHTML=ROOMS.slice(0,lim).map(r=>`<article class="bg-white rounded-lg overflow-hidden border border-slate-200 flex flex-col"><div class="img h-56" style="background-image:url(images/${r.img}),var(--g)" role="img" aria-label="${r.name}"></div>
+<div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-semibold">${r.name}</h3><p class="text-sm mt-2 text-slate-600">${r.desc}</p>
+<ul class="text-sm mt-3 grid grid-cols-2 gap-1 text-slate-700">${r.feat.map(f=>`<li>&#10003; ${f}</li>`).join('')}</ul>
+<div class="mt-auto pt-5 flex items-center justify-between"><div><span class="font-serif text-2xl text-pine">&#8377;${r.price.toLocaleString('en-IN')}</span><span class="text-xs text-slate-500"> / night</span></div><a class="btn btn-gold !py-2" data-room="${r.id}" href="#book">Book</a></div></div></article>`).join('')});
+// Booking
+const bf=document.getElementById('bookForm');
+if(bf){const q=new URLSearchParams(location.search),$=n=>bf.elements[n],today=new Date().toISOString().slice(0,10);
+$('room').innerHTML=ROOMS.map(r=>`<option value="${r.id}">${r.name} - &#8377;${r.price}/night</option>`).join('');
+['checkin','checkout'].forEach(n=>$(n).min=today);
+['room','checkin','checkout','guests'].forEach(n=>{if(q.get(n))$(n).value=q.get(n)});
+const sum=document.getElementById('sum'),nights=()=>{const a=new Date($('checkin').value),b=new Date($('checkout').value);return(a&&b&&b>a)?Math.round((b-a)/864e5):0};
+const upd=()=>{const n=nights(),r=ROOMS.find(x=>x.id==$('room').value);if($('checkin').value)$('checkout').min=$('checkin').value;
+sum.textContent=n?`${n} night${n>1?'s':''} x \u20B9${r.price.toLocaleString('en-IN')} = \u20B9${(n*r.price).toLocaleString('en-IN')} (estimate, taxes extra)`:'Select your dates to see an estimate.'};
+bf.addEventListener('input',upd);upd();
+bf.onsubmit=e=>{e.preventDefault();if(!nights()){sum.textContent='Check-out must be after check-in.';sum.classList.add('text-red-600');return}
+sum.classList.remove('text-red-600');const r=ROOMS.find(x=>x.id==$('room').value),ref='TP'+Date.now().toString().slice(-6);
+const msg=`Booking request ${ref}\nName: ${$('name').value}\nPhone: ${$('phone').value}\nRoom: ${r.name}\nCheck-in: ${$('checkin').value}\nCheck-out: ${$('checkout').value}\nGuests: ${$('guests').value}\nNotes: ${$('notes').value||'-'}`;
+const ok=document.getElementById('ok');ok.classList.remove('hidden');
+ok.innerHTML=`<h3 class="text-xl font-semibold">Booking request ready</h3><p class="text-sm mt-1">Reference <b>${ref}</b>. Send it to our reservations desk to confirm your room.</p><a class="btn btn-gold mt-3" target="_blank" rel="noopener" href="https://wa.me/${HOTEL.wa}?text=${encodeURIComponent(msg)}">Send on WhatsApp</a> <a class="btn mt-3 border border-pine text-pine" href="mailto:${HOTEL.email}?subject=${encodeURIComponent('Booking request '+ref)}&body=${encodeURIComponent(msg)}">Send by Email</a>`;ok.scrollIntoView({behavior:'smooth',block:'center'})}}
+const cf=document.getElementById('contactForm');
+if(cf)cf.onsubmit=e=>{e.preventDefault();const f=cf.elements;location.href=`mailto:${HOTEL.email}?subject=${encodeURIComponent('Website enquiry from '+f.name.value)}&body=${encodeURIComponent(f.message.value+'\n\n'+f.name.value+'\n'+f.email.value)}`};
+
+document.addEventListener('click',e=>{const a=e.target.closest('[data-room]');if(a&&bf)bf.elements.room.value=a.dataset.room;});
+const hf=document.getElementById('homeForm');
+if(hf){hf.elements.checkin.min=new Date().toISOString().slice(0,10);hf.onsubmit=e=>{e.preventDefault();['checkin','checkout','guests'].forEach(n=>bf.elements[n].value=hf.elements[n].value);bf.dispatchEvent(new Event('input'));location.hash='book'}}
+const VIEWS=['home','rooms','facilities','contact'];
+function route(){const h=location.hash.slice(1)||'home',v=h==='book'?'contact':VIEWS.includes(h)?h:'home';
+document.querySelectorAll('main').forEach(m=>m.classList.toggle('hidden',m.dataset.view!==v));
+document.querySelectorAll('.navl').forEach(a=>a.classList.toggle('on',a.dataset.p===v));
+closeMenu();
+if(h==='book')document.getElementById('book').scrollIntoView({behavior:'smooth'});else scrollTo(0,0);
+document.title=({home:'Comfortable Stay in Tilda',rooms:'Rooms & Interiors',facilities:'Facilities & Cleanliness',contact:'Book & Contact'})[v]+' | Hotel Turning Point, Tilda Neora'}
+addEventListener('hashchange',route);route();
+</script></body></html>
